@@ -52,7 +52,7 @@ scrape_configs:
         - www.agora-space.com
         - https://grafana01.monitor.agora-space.com
         - https://chronograf01.monitor.agora-space.com
-        - www.luxurysociety.com
+        - https://www.luxurysociety.com
         - www.digitalluxurygroup.com
 
         # - https://prometheus.io   # Target to probe with https.
