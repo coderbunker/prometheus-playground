@@ -53,7 +53,7 @@ scrape_configs:
         - https://grafana01.monitor.agora-space.com
         - https://chronograf01.monitor.agora-space.com
         - https://www.luxurysociety.com
-        - www.digitalluxurygroup.com
+        - https://www.digitalluxurygroup.com/
 
         # - https://prometheus.io   # Target to probe with https.
         # - http://example.com:8080 # Target to probe with http on port 8080.
