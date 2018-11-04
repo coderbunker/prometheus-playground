@@ -1,20 +1,27 @@
 global:
-  resolve_timeout: 5m
-  slack_api_url: 'your_slack_webhook_url'
-
+  # resolve_timeout: 5m
+  # slack_api_url: 'your_slack_webhook_url'
+  smtp_smarthost: smtp.mailgun.org:587
+  smtp_from: postmaster@sandbox3a3a391dab39458091519a381c663cda.mailgun.org
+  smtp_auth_username: postmaster@sandbox3a3a391dab39458091519a381c663cda.mailgun.org
+  smtp_auth_password: mailgun-credential
 
 route:
   group_by: ['alertname']
   group_wait: 10s
   group_interval: 10s
   repeat_interval: 1h
-  receiver: 'web.hook'
+  receiver: 'team-X-mails'
 receivers:
-- name: 'web.hook'
+- name: 'team-X-mails'
+  email_configs:
+  - to: 'karl.yogi.xu@gmail.com'
+# receivers:
+# - name: 'web.hook'
   # webhook_configs:
   # - url: 'http://127.0.0.1:5001/'
-  slack_configs:
-    - channel: "alerting"
+  # slack_configs:
+    # - channel: "alerting"
 # inhibit_rules:
 #   - source_match:
 #       severity: 'critical'
